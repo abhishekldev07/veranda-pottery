@@ -101,14 +101,12 @@ button { font: inherit; }
 .slider-arrow { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--ink); background: transparent; cursor: pointer; font-size: 20px; }
 .slider-arrow:hover { background: var(--ink); color: white; }
 .workshop-card { min-height: 560px; display: grid; grid-template-columns: 42% 58%; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.poster { margin: 20px; min-height: 520px; background-image: url("assets/workshop-collage.jpg"); background-size: 200% 200%; background-repeat: no-repeat; color: var(--ink); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 16px; position: relative; overflow: hidden; transition: background-position .35s ease; }
-.poster::after { content: none; }
-.poster-top, .poster-bottom { display: flex; justify-content: space-between; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: .12em; position: relative; z-index: 2; }
-.poster-top span, .poster-bottom span { background: rgba(251,248,242,.93); border: 1px solid rgba(207,194,176,.9); border-radius: 999px; padding: 9px 11px; }
-.poster-center { position: relative; z-index: 2; align-self: flex-start; }
-.poster-small { display: inline-block; font-size: 10px; letter-spacing: .14em; margin-bottom: 10px; background: rgba(251,248,242,.93); border: 1px solid rgba(207,194,176,.9); border-radius: 999px; padding: 9px 11px; }
-.poster-center strong { display: block; width: fit-content; max-width: 90%; font-family: "Instrument Serif", serif; font-size: clamp(34px, 3.7vw, 56px); font-weight: 400; line-height: .92; letter-spacing: -.04em; background: rgba(251,248,242,.93); border: 1px solid rgba(207,194,176,.9); border-radius: 16px; padding: 12px 14px; }
-.poster-symbol { display: none; }
+.poster { margin: 20px; min-height: 520px; background: #e9dfd2; border-radius: 16px; position: relative; overflow: hidden; }
+.workshop-image { width: 100%; height: 100%; min-height: 520px; display: block; object-fit: cover; }
+.poster.poster-art .workshop-image { object-fit: contain; background: #eee5d8; }
+.poster.photo-art .workshop-image { object-fit: cover; }
+.workshop-image-caption { position: absolute; left: 18px; bottom: 18px; max-width: calc(100% - 36px); background: rgba(251,248,242,.94); border: 1px solid rgba(207,194,176,.92); border-radius: 999px; padding: 9px 12px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.workshop-image-caption[hidden] { display: none; }
 
 .workshop-info { padding: 52px 58px 46px; display: flex; flex-direction: column; justify-content: center; }
 .workshop-count { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; margin-bottom: 24px; }
@@ -131,6 +129,10 @@ button { font: inherit; }
 .invite-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; align-items: start; }
 .invite-copy { position: sticky; top: 40px; }
 .invite-copy p { max-width: 520px; color: var(--muted); line-height: 1.7; margin: 0 0 30px; }
+.invite-right { display: grid; gap: 14px; }
+.invite-visual { position: relative; min-height: 360px; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: var(--paper-2); }
+.invite-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.invite-visual span { position: absolute; left: 20px; bottom: 20px; background: rgba(251,248,242,.94); border: 1px solid rgba(207,194,176,.92); border-radius: 999px; padding: 10px 13px; font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
 .invite-grid { display: grid; gap: 14px; }
 .invite-grid article { min-height: 210px; background: var(--cream); border: 1px solid var(--line); border-radius: 22px; padding: 28px; position: relative; }
 .invite-grid article:nth-child(2) { margin-left: 44px; }
@@ -185,6 +187,7 @@ button { font: inherit; }
   .section, .hero, .footer { width: min(100% - 32px, 1320px); }
   .workshop-card { grid-template-columns: 1fr; }
   .poster { min-height: 500px; }
+  .workshop-image { min-height: 500px; }
   .workshop-info { padding: 38px 28px 34px; }
   .workshop-shell { grid-template-columns: 1fr; }
   .slider-arrow { position: absolute; z-index: 5; top: 250px; background: var(--paper); }
@@ -204,7 +207,10 @@ button { font: inherit; }
   .section-head { align-items: flex-start; flex-direction: column; }
   .toggle { width: 100%; }
   .toggle-btn { flex: 1; }
-  .poster { margin: 12px; padding: 22px; min-height: 430px; }
+  .poster { margin: 12px; min-height: 430px; }
+  .workshop-image { min-height: 430px; }
+  .invite-visual { min-height: 300px; }
+  .invite-visual span { left: 14px; bottom: 14px; }
   .workshop-facts { grid-template-columns: 1fr; }
   .workshop-actions { align-items: flex-start; flex-direction: column; }
   .visit-details div { grid-template-columns: 88px 1fr; }
