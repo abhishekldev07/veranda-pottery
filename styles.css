@@ -544,7 +544,6 @@ svg { display: block; }
 @media (max-width: 1060px) {
   .hero { grid-template-columns: 1fr 1fr; gap: 38px; }
   .hero h1 { font-size: clamp(62px, 7vw, 78px); }
-  .hero-art { inset-left: 2%; }
   .invite-section { gap: 44px; }
   .workshop-info { padding: 46px 38px; }
 }
