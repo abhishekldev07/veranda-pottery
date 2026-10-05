@@ -84,24 +84,10 @@ button { font: inherit; }
 .hero-meta span { color: var(--muted); font-size: 12px; }
 
 .hero-art { position: relative; min-height: 610px; background: var(--paper-2); border-radius: 40px; overflow: hidden; border: 1px solid #ded1bf; }
-.art-label { position: absolute; z-index: 3; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; }
-.top-label { top: 28px; left: 30px; }
-.art-note { position: absolute; bottom: 28px; right: 30px; z-index: 3; font-family: "Instrument Serif", serif; font-size: 20px; font-style: italic; }
-.clay-scene { position: absolute; inset: 0; }
-.sun-disc { width: 300px; height: 300px; background: #d6bf9d; border-radius: 50%; position: absolute; top: 92px; left: 50%; transform: translateX(-50%); }
-.vessel { position: absolute; left: 50%; transform: translateX(-50%); }
-.vessel-main {
-  width: 280px; height: 325px; bottom: 116px; background: var(--terracotta);
-  border-radius: 44% 44% 32% 32% / 20% 20% 18% 18%;
-  border: 1px solid #8b4d39;
-}
-.vessel-main::before { content: ""; position: absolute; width: 126px; height: 44px; background: var(--paper-2); border: 18px solid var(--terracotta); border-bottom: 0; border-radius: 50% 50% 0 0; left: 50%; top: -30px; transform: translateX(-50%); }
-.vessel-back { width: 168px; height: 220px; bottom: 132px; left: 25%; background: var(--moss); border-radius: 46% 46% 26% 26%; opacity: .9; }
-.small-bowl { position: absolute; width: 135px; height: 72px; right: 62px; bottom: 118px; background: #c8a77e; border-radius: 0 0 70px 70px; border-top: 16px solid #a88867; }
-.vessel-line { position: absolute; left: 24px; right: 24px; height: 1px; background: rgba(66, 31, 19, .36); }
-.vessel-line.one { top: 148px; }
-.vessel-line.two { top: 183px; }
-.clay-shadow { position: absolute; width: 430px; height: 50px; border-radius: 50%; background: rgba(63, 47, 35, .12); bottom: 91px; left: 50%; transform: translateX(-50%); }
+.hero-real-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.art-label { position: absolute; z-index: 3; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; background: rgba(251,248,242,.92); border: 1px solid rgba(207,194,176,.85); border-radius: 999px; padding: 10px 14px; }
+.top-label { top: 24px; left: 24px; }
+.art-note { position: absolute; bottom: 24px; right: 24px; z-index: 3; font-family: "Instrument Serif", serif; font-size: 20px; font-style: italic; background: rgba(251,248,242,.92); border: 1px solid rgba(207,194,176,.85); border-radius: 999px; padding: 10px 14px; }
 
 .section { width: min(1320px, calc(100% - 48px)); margin: 0 auto; padding: 118px 0; border-top: 1px solid var(--line); }
 .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 42px; }
@@ -115,15 +101,14 @@ button { font: inherit; }
 .slider-arrow { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--ink); background: transparent; cursor: pointer; font-size: 20px; }
 .slider-arrow:hover { background: var(--ink); color: white; }
 .workshop-card { min-height: 560px; display: grid; grid-template-columns: 42% 58%; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.poster { margin: 20px; min-height: 520px; background: var(--terracotta); color: #f8ebdb; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 16px; position: relative; overflow: hidden; }
-.poster::after { content: ""; position: absolute; width: 240px; height: 240px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; right: -80px; top: 70px; }
-.poster-top, .poster-bottom { display: flex; justify-content: space-between; font-size: 10px; font-weight: 700; letter-spacing: .14em; position: relative; z-index: 2; }
-.poster-center { position: relative; z-index: 2; }
-.poster-small { display: block; font-size: 11px; letter-spacing: .16em; margin-bottom: 16px; }
-.poster-center strong { display: block; font-family: "Instrument Serif", serif; font-size: clamp(42px, 4.4vw, 70px); font-weight: 400; line-height: .9; letter-spacing: -.04em; }
-.poster-symbol { height: 130px; margin-top: 26px; display: flex; align-items: flex-end; }
-.poster-pot { width: 104px; height: 106px; border: 2px solid #f7eadc; border-radius: 40% 40% 28% 28%; position: relative; }
-.poster-pot::before { content: ""; width: 46px; height: 18px; border: 2px solid #f7eadc; border-bottom: 0; border-radius: 50% 50% 0 0; position: absolute; top: -13px; left: 50%; transform: translateX(-50%); }
+.poster { margin: 20px; min-height: 520px; background-image: url("assets/workshop-collage.jpg"); background-size: 200% 200%; background-repeat: no-repeat; color: var(--ink); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 16px; position: relative; overflow: hidden; transition: background-position .35s ease; }
+.poster::after { content: none; }
+.poster-top, .poster-bottom { display: flex; justify-content: space-between; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: .12em; position: relative; z-index: 2; }
+.poster-top span, .poster-bottom span { background: rgba(251,248,242,.93); border: 1px solid rgba(207,194,176,.9); border-radius: 999px; padding: 9px 11px; }
+.poster-center { position: relative; z-index: 2; align-self: flex-start; }
+.poster-small { display: inline-block; font-size: 10px; letter-spacing: .14em; margin-bottom: 10px; background: rgba(251,248,242,.93); border: 1px solid rgba(207,194,176,.9); border-radius: 999px; padding: 9px 11px; }
+.poster-center strong { display: block; width: fit-content; max-width: 90%; font-family: "Instrument Serif", serif; font-size: clamp(34px, 3.7vw, 56px); font-weight: 400; line-height: .92; letter-spacing: -.04em; background: rgba(251,248,242,.93); border: 1px solid rgba(207,194,176,.9); border-radius: 16px; padding: 12px 14px; }
+.poster-symbol { display: none; }
 
 .workshop-info { padding: 52px 58px 46px; display: flex; flex-direction: column; justify-content: center; }
 .workshop-count { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; margin-bottom: 24px; }
@@ -141,6 +126,7 @@ button { font: inherit; }
 .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 22px; }
 .slider-dot { width: 7px; height: 7px; border-radius: 50%; border: 0; background: #b9ad9e; padding: 0; cursor: pointer; }
 .slider-dot.active { background: var(--ink); }
+.workshop-source-note { margin: 14px auto 0; text-align: center; color: var(--muted); font-size: 11px; }
 
 .invite-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; align-items: start; }
 .invite-copy { position: sticky; top: 40px; }
@@ -212,11 +198,8 @@ button { font: inherit; }
 @media (max-width: 640px) {
   .hero-meta { grid-template-columns: 1fr; gap: 14px; }
   .hero-art { min-height: 460px; }
-  .sun-disc { width: 220px; height: 220px; }
-  .vessel-main { width: 210px; height: 260px; bottom: 94px; }
-  .vessel-back { width: 130px; height: 180px; bottom: 105px; }
-  .small-bowl { width: 100px; height: 58px; right: 24px; bottom: 96px; }
-  .clay-shadow { width: 320px; bottom: 72px; }
+  .art-note { left: 18px; right: auto; bottom: 18px; font-size: 17px; }
+  .top-label { top: 18px; left: 18px; }
   .section { padding: 86px 0; }
   .section-head { align-items: flex-start; flex-direction: column; }
   .toggle { width: 100%; }
