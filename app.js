@@ -1,12 +1,10 @@
 const workshopData = {
   upcoming: [
     {
-      posterSmall: 'STUDIO CLASS',
-      posterTitle: 'TRADITIONAL\nCAMBODIAN POTTERY',
-      posterDate: 'DM TO BOOK',
-      posterPlace: 'VERANDA POTTERY',
-      posterYear: '2026',
-      imageFocus: '0% 0%',
+      image: 'assets/studio-shelf.webp',
+      imageAlt: 'Pottery and handmade pieces displayed inside Veranda Pottery',
+      imageType: 'photo',
+      imageCaption: 'Studio class · Veranda Pottery',
       status: 'Available at Veranda',
       title: 'Traditional Cambodian Pottery',
       description: 'A one-hour hands-on class focused on traditional Cambodian pottery. Shape your own piece from clay and collect it after the firing process is complete.',
@@ -17,12 +15,10 @@ const workshopData = {
       details: 'Veranda currently offers a one-hour Traditional Cambodian Pottery class for $10. Finished pottery is prepared through the firing process and is usually ready for collection in about one month.'
     },
     {
-      posterSmall: 'STUDIO CLASS',
-      posterTitle: 'WATER-SAFE\nCERAMIC',
-      posterDate: 'DM TO BOOK',
-      posterPlace: 'VERANDA POTTERY',
-      posterYear: '2026',
-      imageFocus: '100% 100%',
+      image: 'assets/hero-farm-to-table.webp',
+      imageAlt: 'Guests taking part in a hands-on Veranda pottery workshop',
+      imageType: 'photo',
+      imageCaption: 'Hands-on pottery · Phnom Penh',
       status: 'Available at Veranda',
       title: 'Water-safe Ceramic',
       description: 'Create a ceramic piece that goes through a double-firing process so it can safely hold water. The class runs for one hour at Veranda.',
@@ -35,12 +31,10 @@ const workshopData = {
   ],
   previous: [
     {
-      posterSmall: 'WITH FARM TO TABLE',
-      posterTitle: 'POTTERY\nWEEKEND',
-      posterDate: '19–20 SEP',
-      posterPlace: 'FARM TO TABLE',
-      posterYear: '2026',
-      imageFocus: '100% 0%',
+      image: 'assets/farm-to-table-poster.webp',
+      imageAlt: 'Farm to Table and Veranda Pottery workshop poster for September 19 to 20',
+      imageType: 'poster',
+      imageCaption: '',
       status: 'Previous workshop',
       title: 'Pottery Workshop at Farm to Table',
       description: 'A weekend collaboration in BKK with two activities: make two pottery pieces or paint traditional pottery and add a small plant.',
@@ -51,12 +45,10 @@ const workshopData = {
       details: 'The 90-minute activities included Make Your Own Pottery for $20, with two pieces collected after firing, and Painting on Pottery & Plant a Small Plant for $30, taken home the same day. Snacks and drinks were included.'
     },
     {
-      posterSmall: 'WITH SIGN CAFE',
-      posterTitle: 'POTTERY\nWORKSHOP',
-      posterDate: '08 AUG',
-      posterPlace: 'SIGN CAFE',
-      posterYear: '2026',
-      imageFocus: '0% 100%',
+      image: 'assets/sign-cafe-poster.webp',
+      imageAlt: 'Veranda Pottery extra session poster at Sign Cafe on August 8',
+      imageType: 'poster',
+      imageCaption: '',
       status: 'Previous workshop',
       title: 'Pottery Workshop at Sign Cafe',
       description: 'A one-hour pottery workshop hosted at Sign Cafe on Bassac Lane as part of the Phnom Penh Houseplant Festival community program.',
@@ -67,12 +59,10 @@ const workshopData = {
       details: 'This extra session took place on August 8 at Sign Cafe on Bassac Lane. Tickets were $10 per person and places were limited.'
     },
     {
-      posterSmall: 'WITH PTEAH CHAS',
-      posterTitle: 'KHMER\nPOTTERY',
-      posterDate: '04 JUL',
-      posterPlace: 'PTEAH CHAS',
-      posterYear: '2026',
-      imageFocus: '100% 100%',
+      image: 'assets/pteah-chas-poster.webp',
+      imageAlt: 'Khmer Traditional Pottery workshop poster by Veranda Pottery at Pteah Chas',
+      imageType: 'poster',
+      imageCaption: '',
       status: 'Previous workshop',
       title: 'Traditional Pottery at Pteah Chas',
       description: 'A beginner-friendly session introducing traditional Khmer pottery and essential hand-shaping techniques at Pteah Chas.',
@@ -83,12 +73,10 @@ const workshopData = {
       details: 'Held on July 4 at Pteah Chas, this workshop invited beginners to create their own pottery piece while learning traditional Khmer shaping techniques. Tickets were $10 per person.'
     },
     {
-      posterSmall: 'AT FACTORY PHNOM PENH',
-      posterTitle: 'KHMER TRADITIONAL\nPOTTERY',
-      posterDate: '23 MAY',
-      posterPlace: 'FACTORY PHNOM PENH',
-      posterYear: '2026',
-      imageFocus: '0% 0%',
+      image: 'assets/factory-poster.webp',
+      imageAlt: 'Khmer Traditional Pottery workshop poster at Factory Phnom Penh',
+      imageType: 'poster',
+      imageCaption: '',
       status: 'Previous workshop',
       title: 'Khmer Traditional Pottery at Factory',
       description: 'A short hands-on cultural workshop focused on traditional Cambodian pottery, heritage and shaping a piece from real clay.',
@@ -105,11 +93,9 @@ let activeTab = 'upcoming';
 let activeIndex = 0;
 
 const els = {
-  posterSmall: document.getElementById('posterSmall'),
-  posterTitle: document.getElementById('posterTitle'),
-  posterDate: document.getElementById('posterDate'),
-  posterPlace: document.getElementById('posterPlace'),
-  posterYear: document.getElementById('posterYear'),
+  poster: document.getElementById('poster'),
+  image: document.getElementById('workshopImage'),
+  imageCaption: document.getElementById('workshopImageCaption'),
   status: document.getElementById('workshopStatus'),
   title: document.getElementById('workshopTitle'),
   description: document.getElementById('workshopDescription'),
@@ -125,12 +111,14 @@ const els = {
 function renderWorkshop() {
   const list = workshopData[activeTab];
   const item = list[activeIndex];
-  els.posterSmall.textContent = item.posterSmall;
-  els.posterTitle.innerHTML = item.posterTitle.replace('\n', '<br>');
-  els.posterDate.textContent = item.posterDate;
-  els.posterPlace.textContent = item.posterPlace;
-  els.posterYear.textContent = item.posterYear;
-  document.getElementById('poster').style.backgroundPosition = item.imageFocus || '50% 50%';
+
+  els.image.src = item.image;
+  els.image.alt = item.imageAlt;
+  els.poster.classList.toggle('poster-art', item.imageType === 'poster');
+  els.poster.classList.toggle('photo-art', item.imageType !== 'poster');
+  els.imageCaption.textContent = item.imageCaption || '';
+  els.imageCaption.hidden = !item.imageCaption;
+
   els.status.textContent = item.status;
   els.title.textContent = item.title;
   els.description.textContent = item.description;
