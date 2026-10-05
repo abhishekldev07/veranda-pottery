@@ -18,7 +18,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
@@ -63,7 +63,7 @@ button { font: inherit; }
   font-size: 12px; font-weight: 700; letter-spacing: .17em; color: var(--terracotta-dark);
 }
 .hero h1, .section h2, .details-modal h2 {
-  font-family: "Instrument Serif", Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif;
   font-weight: 400;
   letter-spacing: -.045em;
   margin: 16px 0 22px;
@@ -87,7 +87,7 @@ button { font: inherit; }
 .hero-real-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .art-label { position: absolute; z-index: 3; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; background: rgba(251,248,242,.92); border: 1px solid rgba(207,194,176,.85); border-radius: 999px; padding: 10px 14px; }
 .top-label { top: 24px; left: 24px; }
-.art-note { position: absolute; bottom: 24px; right: 24px; z-index: 3; font-family: "Instrument Serif", serif; font-size: 20px; font-style: italic; background: rgba(251,248,242,.92); border: 1px solid rgba(207,194,176,.85); border-radius: 999px; padding: 10px 14px; }
+.art-note { position: absolute; bottom: 24px; right: 24px; z-index: 3; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif; font-size: 20px; font-style: italic; background: rgba(251,248,242,.92); border: 1px solid rgba(207,194,176,.85); border-radius: 999px; padding: 10px 14px; }
 
 .section { width: min(1320px, calc(100% - 48px)); margin: 0 auto; padding: 118px 0; border-top: 1px solid var(--line); }
 .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 42px; }
@@ -112,7 +112,7 @@ button { font: inherit; }
 .workshop-count { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 12px; margin-bottom: 24px; }
 .hairline { width: 42px; height: 1px; background: var(--line); }
 .status-pill { align-self: flex-start; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; color: var(--terracotta-dark); font-size: 11px; font-weight: 700; }
-.workshop-info h3 { font-family: "Instrument Serif", serif; font-size: clamp(46px, 5vw, 68px); font-weight: 400; line-height: .95; letter-spacing: -.04em; margin: 20px 0; }
+.workshop-info h3 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif; font-size: clamp(46px, 5vw, 68px); font-weight: 400; line-height: .95; letter-spacing: -.04em; margin: 20px 0; }
 .workshop-info > p { color: var(--muted); line-height: 1.7; font-size: 15px; max-width: 680px; }
 .workshop-facts { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin-top: 24px; }
 .workshop-facts div { padding: 16px 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
@@ -136,7 +136,7 @@ button { font: inherit; }
 .invite-grid { display: grid; gap: 14px; }
 .invite-grid article { min-height: 210px; background: var(--cream); border: 1px solid var(--line); border-radius: 22px; padding: 28px; position: relative; }
 .invite-grid article:nth-child(2) { margin-left: 44px; }
-.invite-grid h3 { font-family: "Instrument Serif", serif; font-size: 42px; font-weight: 400; margin: 44px 0 8px; }
+.invite-grid h3 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif; font-size: 42px; font-weight: 400; margin: 44px 0 8px; }
 .invite-grid p { color: var(--muted); line-height: 1.6; max-width: 540px; margin: 0; }
 .card-no { position: absolute; top: 24px; right: 24px; font-size: 11px; color: var(--muted); }
 
@@ -157,7 +157,7 @@ button { font: inherit; }
 .visit-details strong { font-size: 15px; line-height: 1.45; }
 
 .footer { width: min(1320px, calc(100% - 48px)); margin: 0 auto; padding: 46px 0 60px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto auto; gap: 30px; align-items: center; }
-.footer-brand { font-family: "Instrument Serif", serif; font-size: 30px; }
+.footer-brand { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif; font-size: 30px; }
 .footer p { color: var(--muted); font-size: 12px; }
 .footer-links { display: flex; gap: 18px; font-size: 12px; font-weight: 700; }
 
