@@ -78,7 +78,7 @@ button { font: inherit; }
 .button-dark { background: var(--ink); color: var(--white); }
 .button-light { background: transparent; color: var(--ink); }
 .button:hover { transform: translateY(-1px); }
-.hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 70px; padding-top: 22px; border-top: 1px solid var(--line); }
+.hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--line); }
 .hero-meta div { display: grid; gap: 6px; }
 .hero-meta strong { font-size: 13px; }
 .hero-meta span { color: var(--muted); font-size: 12px; }
