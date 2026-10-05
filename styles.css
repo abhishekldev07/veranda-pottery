@@ -232,3 +232,24 @@ button { font: inherit; }
   .visit-details strong { font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
   .visit-copy .text-link.large { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; margin-top: 20px; padding: 13px 16px; border: 0; border-radius: 999px; background: var(--ink); color: var(--white); font-size: 14px; }
 }
+
+@media (max-width: 980px) {
+  .menu-toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--cream); color: var(--ink); font-size: 13px; cursor: pointer; }
+  .menu-toggle::before { content: ""; width: 14px; height: 2px; background: currentColor; box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor; }
+  .menu-toggle[aria-expanded="true"] { background: var(--ink); border-color: var(--ink); color: var(--white); }
+  .nav { top: 78px; padding: 14px; border-radius: 24px; box-shadow: 0 16px 40px rgba(36, 33, 29, .14); gap: 10px; }
+  .nav.open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); animation: menu-appear .2s ease-out; }
+  .nav a { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 58px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); font-size: 14px; font-weight: 600; opacity: 1; }
+  .nav a::after { content: "↗"; color: var(--terracotta); font-size: 18px; }
+  .nav a:hover, .nav a:focus-visible { background: var(--paper-2); }
+  .nav .nav-cta { grid-column: 1 / -1; justify-content: center; min-height: 48px; margin-top: 4px; border-color: var(--ink); border-radius: 999px; background: var(--ink); color: var(--white); }
+  .nav .nav-cta::after { content: "→"; color: inherit; }
+  .nav .nav-cta:hover, .nav .nav-cta:focus-visible { background: var(--terracotta-dark); border-color: var(--terracotta-dark); }
+}
+@keyframes menu-appear {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav.open { animation: none; }
+}
