@@ -6,6 +6,7 @@ const workshopData = {
       posterDate: 'DM TO BOOK',
       posterPlace: 'VERANDA POTTERY',
       posterYear: '2026',
+      imageFocus: '0% 0%',
       status: 'Available at Veranda',
       title: 'Traditional Cambodian Pottery',
       description: 'A one-hour hands-on class focused on traditional Cambodian pottery. Shape your own piece from clay and collect it after the firing process is complete.',
@@ -21,6 +22,7 @@ const workshopData = {
       posterDate: 'DM TO BOOK',
       posterPlace: 'VERANDA POTTERY',
       posterYear: '2026',
+      imageFocus: '100% 100%',
       status: 'Available at Veranda',
       title: 'Water-safe Ceramic',
       description: 'Create a ceramic piece that goes through a double-firing process so it can safely hold water. The class runs for one hour at Veranda.',
@@ -38,6 +40,7 @@ const workshopData = {
       posterDate: '19–20 SEP',
       posterPlace: 'FARM TO TABLE',
       posterYear: '2026',
+      imageFocus: '100% 0%',
       status: 'Previous workshop',
       title: 'Pottery Workshop at Farm to Table',
       description: 'A weekend collaboration in BKK with two activities: make two pottery pieces or paint traditional pottery and add a small plant.',
@@ -53,6 +56,7 @@ const workshopData = {
       posterDate: '08 AUG',
       posterPlace: 'SIGN CAFE',
       posterYear: '2026',
+      imageFocus: '0% 100%',
       status: 'Previous workshop',
       title: 'Pottery Workshop at Sign Cafe',
       description: 'A one-hour pottery workshop hosted at Sign Cafe on Bassac Lane as part of the Phnom Penh Houseplant Festival community program.',
@@ -68,6 +72,7 @@ const workshopData = {
       posterDate: '04 JUL',
       posterPlace: 'PTEAH CHAS',
       posterYear: '2026',
+      imageFocus: '100% 100%',
       status: 'Previous workshop',
       title: 'Traditional Pottery at Pteah Chas',
       description: 'A beginner-friendly session introducing traditional Khmer pottery and essential hand-shaping techniques at Pteah Chas.',
@@ -83,6 +88,7 @@ const workshopData = {
       posterDate: '23 MAY',
       posterPlace: 'FACTORY PHNOM PENH',
       posterYear: '2026',
+      imageFocus: '0% 0%',
       status: 'Previous workshop',
       title: 'Khmer Traditional Pottery at Factory',
       description: 'A short hands-on cultural workshop focused on traditional Cambodian pottery, heritage and shaping a piece from real clay.',
@@ -124,6 +130,7 @@ function renderWorkshop() {
   els.posterDate.textContent = item.posterDate;
   els.posterPlace.textContent = item.posterPlace;
   els.posterYear.textContent = item.posterYear;
+  document.getElementById('poster').style.backgroundPosition = item.imageFocus || '50% 50%';
   els.status.textContent = item.status;
   els.title.textContent = item.title;
   els.description.textContent = item.description;
