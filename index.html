@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Veranda Pottery workshop concept website draft." />
+  <title>Veranda Pottery — Workshops & Khmer Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Veranda Pottery home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span class="brand-text">veranda pottery</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#invite">Invite us</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-cta" href="#workshops">Find a workshop</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">POTTERY · WORKSHOPS · PHNOM PENH</div>
+        <h1>Make something<br><em>with your hands.</em></h1>
+        <p class="hero-lead">Veranda brings Khmer pottery into hands-on workshops, from quiet afternoons with clay to sessions hosted at schools, cafés and community spaces.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#workshops">Explore workshops</a>
+          <a class="button button-light" href="#invite">Invite Veranda</a>
+        </div>
+        <div class="hero-meta" aria-label="Quick facts">
+          <div><strong>Traditional clay</strong><span>Hands-on Khmer craft</span></div>
+          <div><strong>Group friendly</strong><span>Schools, friends & teams</span></div>
+          <div><strong>Tonle Bassac</strong><span>Street 312, Phnom Penh</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Decorative pottery illustration">
+        <div class="art-label top-label">slow down · shape · make</div>
+        <div class="clay-scene">
+          <div class="sun-disc"></div>
+          <div class="vessel vessel-back"></div>
+          <div class="vessel vessel-main">
+            <div class="vessel-line one"></div>
+            <div class="vessel-line two"></div>
+          </div>
+          <div class="small-bowl"></div>
+          <div class="clay-shadow"></div>
+        </div>
+        <div class="art-note">A simple ritual: clay, water, time.</div>
+      </div>
+    </section>
+
+    <section class="section workshops-section" id="workshops">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-kicker">WORKSHOPS</span>
+          <h2>Find your next session.</h2>
+        </div>
+        <div class="toggle" role="tablist" aria-label="Workshop type">
+          <button class="toggle-btn active" data-tab="upcoming" role="tab" aria-selected="true">Upcoming</button>
+          <button class="toggle-btn" data-tab="previous" role="tab" aria-selected="false">Previous</button>
+        </div>
+      </div>
+
+      <div class="workshop-shell reveal">
+        <button class="slider-arrow prev" aria-label="Previous workshop">←</button>
+        <article class="workshop-card" id="workshopCard" aria-live="polite">
+          <div class="poster" id="poster">
+            <div class="poster-top"><span>VERANDA</span><span id="posterYear">2026</span></div>
+            <div class="poster-center">
+              <span class="poster-small" id="posterSmall">POTTERY WORKSHOP</span>
+              <strong id="posterTitle">MAKE YOUR OWN<br>POTTERY</strong>
+              <div class="poster-symbol" aria-hidden="true">
+                <div class="poster-pot"></div>
+              </div>
+            </div>
+            <div class="poster-bottom">
+              <span id="posterDate">NEXT DATE TBA</span>
+              <span id="posterPlace">PHNOM PENH</span>
+            </div>
+          </div>
+
+          <div class="workshop-info">
+            <div class="workshop-count"><span id="slideIndex">01</span><span class="hairline"></span><span id="slideTotal">02</span></div>
+            <span class="status-pill" id="workshopStatus">Next date to be announced</span>
+            <h3 id="workshopTitle">Make Your Own Pottery</h3>
+            <p id="workshopDescription">Shape two pottery pieces by hand and experience the slow, tactile process of working with clay. Finished pieces are fired using a traditional Cambodian method and collected later.</p>
+
+            <div class="workshop-facts">
+              <div><span>Experience</span><strong id="workshopDuration">90 min</strong></div>
+              <div><span>From</span><strong id="workshopPrice">$20</strong></div>
+              <div><span>Collection</span><strong id="workshopPickup">After firing</strong></div>
+              <div><span>Location</span><strong id="workshopLocation">Announced per workshop</strong></div>
+            </div>
+
+            <div class="workshop-actions">
+              <button class="button button-dark" id="detailsBtn">View details</button>
+              <a class="text-link" href="https://www.facebook.com/share/19ANzzMare/" target="_blank" rel="noreferrer">Check Facebook ↗</a>
+            </div>
+          </div>
+        </article>
+        <button class="slider-arrow next" aria-label="Next workshop">→</button>
+      </div>
+
+      <div class="slider-dots" id="sliderDots" aria-label="Workshop slides"></div>
+    </section>
+
+    <section class="section invite-section" id="invite">
+      <div class="invite-copy reveal">
+        <span class="section-kicker">INVITE US</span>
+        <h2>Bring the workshop<br>to your space.</h2>
+        <p>Planning a school activity, café event, team day or private gathering? Veranda can bring a hands-on pottery session to you.</p>
+        <a class="button button-dark" href="https://www.facebook.com/share/19ANzzMare/" target="_blank" rel="noreferrer">Invite Veranda</a>
+      </div>
+
+      <div class="invite-grid reveal">
+        <article>
+          <span class="card-no">01</span>
+          <h3>Schools</h3>
+          <p>Hands-on clay sessions for young makers, classes and creative learning days.</p>
+        </article>
+        <article>
+          <span class="card-no">02</span>
+          <h3>Cafés & spaces</h3>
+          <p>Host a limited workshop that gives your community a reason to gather and create.</p>
+        </article>
+        <article>
+          <span class="card-no">03</span>
+          <h3>Teams & events</h3>
+          <p>A slower, tactile group activity for private events, teams, families and friends.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section visit-section" id="visit">
+      <div class="map-card reveal">
+        <iframe
+          title="Veranda Pottery location"
+          src="https://www.google.com/maps?q=13A%20Street%20312%20Tonle%20Bassac%20Phnom%20Penh%20Cambodia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-fallback" aria-hidden="true">
+          <div class="map-grid"></div>
+          <div class="map-road road-one"></div>
+          <div class="map-road road-two"></div>
+          <div class="map-pin"><span></span></div>
+          <div class="map-caption">Tonle Bassac · Phnom Penh</div>
+        </div>
+      </div>
+
+      <div class="visit-copy reveal">
+        <span class="section-kicker">VISIT VERANDA</span>
+        <h2>Come by, have a look,<br>get your hands in clay.</h2>
+        <div class="visit-details">
+          <div><span>Address</span><strong>#13A, Street 312<br>Tonle Bassac, Phnom Penh</strong></div>
+          <div><span>Hours</span><strong>Daily<br>8:00 AM – 7:00 PM</strong></div>
+          <div><span>Phone</span><strong>+855 16 783 083</strong></div>
+        </div>
+        <a class="text-link large" href="https://www.google.com/maps/search/?api=1&query=13A%20Street%20312%20Tonle%20Bassac%20Phnom%20Penh%20Cambodia" target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">veranda pottery</div>
+    <p>Pottery · workshops · café · Phnom Penh</p>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/share/19ANzzMare/" target="_blank" rel="noreferrer">Facebook</a>
+      <a href="https://instagram.com/veranda_pottery" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="details-modal" id="detailsModal">
+    <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
+    <div class="modal-tag">WORKSHOP DETAILS</div>
+    <h2 id="modalTitle">Make Your Own Pottery</h2>
+    <p id="modalText"></p>
+    <div class="modal-facts" id="modalFacts"></div>
+    <a class="button button-dark" href="https://www.facebook.com/share/19ANzzMare/" target="_blank" rel="noreferrer">Ask about a slot</a>
+    <p class="prototype-note">Frontend draft only. Booking and payment are not connected yet.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
