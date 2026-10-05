@@ -253,3 +253,14 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .nav.open { animation: none; }
 }
+
+@media (min-width: 981px) {
+  .invite-section { position: relative; isolation: isolate; }
+  .invite-section::before { content: ""; position: absolute; left: -100px; bottom: 0; width: 360px; height: 450px; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22450%22%20viewBox%3D%220%200%20360%20450%22%3E%3Cpath%20d%3D%22M0%200C150%2024%2065%20175%20217%20246C294%20282%20350%20360%20360%20450H0Z%22%20fill%3D%22%23ead8bd%22%20opacity%3D%22.5%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23c8aa85%22%20stroke-width%3D%223%22%20opacity%3D%22.72%22%3E%3Cpath%20d%3D%22M78%20426C44%20365%2034%20288%2072%20259L98%20247L102%20217Q82%20205%2093%20198Q131%20184%20167%20199Q180%20207%20162%20217L166%20245L193%20260C232%20291%20222%20366%20187%20428%22%2F%3E%3Cellipse%20cx%3D%22130%22%20cy%3D%22202%22%20rx%3D%2237%22%20ry%3D%229%22%2F%3E%3Cpath%20d%3D%22M101%20232Q130%20239%20164%20232M80%20271Q130%20290%20195%20271M68%20299Q130%20318%20207%20299M66%20329Q130%20348%20209%20329M72%20359Q130%20378%20202%20359M85%20391Q133%20408%20189%20391%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2369715d%22%20stroke-width%3D%223%22%20fill%3D%22%2369715d%22%20opacity%3D%22.75%22%3E%3Cpath%20d%3D%22M6%20277Q28%20218%2058%20139M166%20448Q222%20406%20268%20348%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M34%20205Q17%20163%2024%20146Q44%20165%2034%20205M42%20190Q62%20157%2074%20153Q68%20180%2042%20190%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M47%20171Q46%20131%2068%20111Q69%20148%2047%20171M28%20224Q49%20192%2074%20193Q60%20219%2028%20224M17%20250Q13%20213%204%20203Q-5%20235%2017%20250M202%20421Q208%20383%20231%20370Q235%20402%20202%20421M224%20398Q257%20374%20287%20386Q265%20409%20224%20398M178%20438Q210%20430%20232%20445Q206%20457%20178%20438%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23c8aa85%22%20opacity%3D%22.6%22%3E%3Ccircle%20cx%3D%22253%22%20cy%3D%22306%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22270%22%20cy%3D%22322%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22329%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") left bottom / contain no-repeat; pointer-events: none; z-index: -1; }
+  .invite-copy h2 { font-size: clamp(52px, 4.5vw, 64px); line-height: 1.06; max-width: 520px; }
+  .invite-copy p { font-size: 17px; line-height: 1.65; }
+  .invite-copy .section-kicker { display: inline-flex; align-items: center; gap: 12px; }
+  .invite-copy .section-kicker::after { content: ""; width: 60px; height: 1px; background: var(--terracotta); }
+  .invite-copy .button { padding: 17px 28px; font-size: 16px; gap: 18px; }
+  .invite-copy .button::after { content: "→"; font-size: 22px; font-weight: 400; }
+}
