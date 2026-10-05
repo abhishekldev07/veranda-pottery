@@ -164,6 +164,8 @@ document.getElementById('detailsBtn').addEventListener('click', () => {
     <div><span>Price</span><strong>${item.price}</strong></div>
     <div><span>Collection</span><strong>${item.pickup}</strong></div>
     <div><span>Location</span><strong>${item.location}</strong></div>`;
+  const slotCta = document.getElementById('modalSlotCta');
+  slotCta.hidden = activeTab === 'previous';
   modal.showModal();
 });
 document.getElementById('modalClose').addEventListener('click', () => modal.close());
